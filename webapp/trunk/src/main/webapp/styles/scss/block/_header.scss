@@ -1,0 +1,33 @@
+.header {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: #3783c3;
+
+    .user-menu {
+        line-height: 50px;
+        float: right;
+        color: $white;
+
+        a {
+            color: $white;
+        }
+
+        .fa-user {
+            font-size: 20px;
+            padding-right: 10px;
+        }
+    }
+
+    .item {
+        display: inline-block;
+        color: $white;
+        padding-right: 10px;
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}

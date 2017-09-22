@@ -1,0 +1,39 @@
+@import "mixins/mixins";
+@import "mixins/mixins_variables";
+@import "block/header";
+@import "block/left-menu";
+
+
+.content-wrapper {
+    padding: 50px 0 0 50px;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+
+    .content {
+        padding: 35px;
+    }
+}
+
+.page.expanded {
+    .content-wrapper {
+        padding-left: 300px;
+    }
+}
+
+.table-grid {
+    .action-button {
+        display: none;
+    }
+}
+
+.dataTables_wrapper {
+    input[type="search"] {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}
+
+.add-new-row {
+    padding-bottom: 20px;
+}

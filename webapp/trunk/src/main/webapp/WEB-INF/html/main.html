@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+
+	<title>Admin Panel</title>
+	<meta name="description" content="">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="libs/mCustomScrollbar/css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="libs/DataTables/css/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" href="styles/css/global.css">
+	<link rel="stylesheet" href="styles/css/main.css">
+
+	<script src="libs/modernizr/modernizr.js"></script>
+</head>
+<body>
+	<div class="page js-page">
+		<header class="header">
+			<div class="container-fluid">
+				<div class="user-menu">
+					<div class="item"><i class="fa fa-user"></i>Admin</div>
+					<div class="item"><a href="#">Logout</a></div>
+				</div>
+			</div>
+		</header>
+
+		<aside class="left-menu js-left-menu">
+			<div class="toggle-menu js-toggle-menu" title="Меню">
+				<div class="btn-row"></div>
+				<div class="btn-row"></div>
+				<div class="btn-row"></div>
+			</div>
+			<nav class="left-navigation js-left-navigation mCustomScrollbar">
+				<ul class="left-menu-list js-left-menu-list">
+					<li class="active js-main-item"><a href="#"><span class="menu-img js-menu-img"><i class="fa fa-home"></i></span>Home</a></li>
+					<li class="js-main-item"><a class="js-prevent-default" href="#"><span class="menu-img js-menu-img"><i class="fa fa-cog"></i></span>Settings <i class="fa fa-angle-down"></i></a>
+						<ul>
+							<li><a href="#1">Menu item 1</a></li>
+							<li><a href="#2">Menu item 2</a></li>
+							<li><a href="#3">Menu item 3</a></li>
+						</ul>
+					</li>
+					<li class="js-main-item"><a href="#" class="js-prevent-default"><span class="menu-img js-menu-img"><i class="fa fa-file"></i></span>Files <i class="fa fa-angle-down"></i></a>
+						<ul>
+							<li><a href="#" class="js-prevent-default">Menu item 1 <i class="fa fa-angle-down fa-angle-down--not-main"></i></a>
+								<ul>
+									<li><a href="#4">Menu item 1.1</a></li>
+									<li><a class="js-prevent-default" href="#5">Menu item 1.2 <i class="fa fa-angle-down fa-angle-down--not-main"></i></a>
+										<ul>
+											<li><a href="#6">Menu item 1.1.1</a></li>
+											<li><a href="#7">Menu item 1.1.2</a></li>
+											<li><a href="#8">Menu item 1.1.3</a></li>
+										</ul>
+									</li>
+									<li><a href="#9">Menu item 1.3</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Menu item 2</a></li>
+							<li><a href="#">Menu item 3</a></li>
+						</ul>
+					</li>
+					<li class="js-main-item"><a href="#"><span class="menu-img js-menu-img"><i class="fa fa-table"></i></span>Tables</a></li>
+				</ul>
+			</nav>
+		</aside>
+
+		<section class="content-wrapper">
+			<div class="content">
+				<div class="row">
+					<div class="js-ajax-messages"></div>
+					<div class="add-new-row js-add-new-row">
+						<button style="display: block; margin-top: 10px;" type="button" class="btn btn-primary js-add-row">Add row</button>
+					</div>
+					<table class="table js-editable-table table-grid table-striped table-bordered" cellspacing="0" width="100%">
+						<thead>
+						<tr>
+							<th data-name="id">ID</th>
+							<th data-name="locale">Locale</th>
+							<th data-name="code">Code</th>
+							<th data-name="value">Value</th>
+							<th class="js-not-editable-col">Actions</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td><div>1</div></td>
+							<td><div>ru</div></td>
+							<td><div>passengers.auto.fill</div></td>
+							<td><div>test</div></td>
+							<td>
+								<div class="js-not-editable">
+									<div class="hidden js-row-info" data-identifiableid="111"  data-test="222"></div>
+									<a class="js-row-edit" href="#">Edit </a>
+									<a class="js-row-save" style="display: none;" href="#">Save </a>
+									<a class="js-row-cancel" style="display: none;" href="#">Cancel</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><div>2</div></td>
+							<td><div>en</div></td>
+							<td><div>passengers.auto.fill</div></td>
+							<td><div>Auto-complete passenger data</div></td>
+							<td>
+								<div class="js-not-editable">
+									<div class="hidden js-row-info" data-identifiableid="11"></div>
+									<a class="js-row-edit" href="#">Edit </a>
+									<a class="js-row-save" style="display: none;" href="#">Save </a>
+									<a class="js-row-cancel" style="display: none;" href="#">Cancel</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><div>3</div></td>
+							<td><div>ru</div></td>
+							<td><div>checkout.error.ffp</div></td>
+							<td><div>Неправильно указан номер программы лояльности.</div></td>
+							<td>
+								<div class="js-not-editable">
+									<div class="hidden js-row-info" data-identifiableid="11"></div>
+									<a class="js-row-edit" href="#">Edit </a>
+									<a class="js-row-save" style="display: none;" href="#">Save </a>
+									<a class="js-row-cancel" style="display: none;" href="#">Cancel</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td><div>4</div></td>
+							<td><div>en</div></td>
+							<td><div>checkout.error.ffp 2</div></td>
+							<td><div>Неправильно указан номер программы лояльности. 2</div></td>
+							<td>
+								<div class="js-not-editable">
+									<div class="hidden js-row-info" data-identifiableid="11"></div>
+									<a class="js-row-edit" href="#">Edit</a>
+									<a class="js-row-save" style="display: none;" href="#">Save </a>
+									<a class="js-row-cancel" style="display: none;" href="#">Cancel</a>
+								</div>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="hidden"></div>
+	<div class="loader js-loader">
+		<div class="loader_inner"></div>
+	</div>
+
+	<script src="libs/jquery/jquery-2.1.4.min.js"></script>
+	<script src="libs/DataTables/js/jquery.dataTables.min.js"></script>
+	<script src="libs/DataTables/js/dataTables.bootstrap.min.js"></script>
+	<script src="libs/mCustomScrollbar/jquery.mCustomScrollbar.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>
