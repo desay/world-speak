@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="ams-webapp:war">
-    <output-path>$PROJECT_DIR$/webapp/trunk/target</output-path>
-    <root id="archive" name="ws-webapp-0.0.1-SNAPSHOT.war">
-      <element id="artifact" artifact-name="ams-webapp:war exploded" />
-    </root>
-  </artifact>
-</component>
