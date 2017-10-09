@@ -21,6 +21,7 @@
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -102,38 +103,67 @@
             <div class="row">
                 <div class="js-ajax-messages"></div>
                 <form role="form" name="form" id="addForm">
-                    <div class="add-new-row js-add-new-row">
-                        <button style="display: block; margin-top: 10px;" type="button" class="btn btn-primary js-add-row">Add row</button>
+                    <div class="add-new-row js-add-new-row" align="center" style="
+    margin-right: 300px;
+">
+                        Form
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-success">Russian</button>
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                                <span class="sr-only">Меню с переключением</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Действие</a></li>
+                                <li><a href="#">Другое действие</a></li>
+                                <li><a href="#">Что-то иное</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Отдельная ссылка</a></li>
+                            </ul>
+                        </div>
+                        To
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-success">English</button>
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                                <span class="sr-only">Меню с переключением</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Действие</a></li>
+                                <li><a href="#">Другое действие</a></li>
+                                <li><a href="#">Что-то иное</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Отдельная ссылка</a></li>
+                            </ul>
+                        </div>
+
+                        <button type="button" class="btn btn-default btn-lg" style="margin-left: 160px;
+"><span class="glyphicon glyphicon-star"></span></button>
+                        <button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-volume-up"></span></button>
+
+                        <div class="btn-group" style="
+    left: 300px;
+">
+                            <button type="button" class="btn btn-success">Select theme</button>
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                                <span class="sr-only">Меню с переключением</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Действие</a></li>
+                                <li><a href="#">Другое действие</a></li>
+                                <li><a href="#">Что-то иное</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Отдельная ссылка</a></li>
+                            </ul>
+                        </div>
+                    </div>                    <div class="add-new-row js-add-new-row" align="center">
+                        <i class="fa fa-microphone fa-3x" aria-hidden="true"></i>
                     </div>
-                    <table class="table js-editable-table table-grid table-striped table-bordered" cellspacing="0" width="100%">
-                        <thead>
-                        <tr>
-                            <th data-name="email">Email</th>
-                            <th data-name="password">Password</th>
-                            <th data-name="role">Role</th>
-                            <th class="js-not-editable-col">Actions</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <c:if test="${not empty userList}">
-                            <c:forEach items="${userList}" var="value">
-                                <tr>
-                                    <td><div>${value.email}</div></td>
-                                    <td><div>${value.passwordHash}</div></td>
-                                    <td><div>${value.role}</div></td>
-                                    <td>
-                                        <div class="js-not-editable">
-                                            <div class="hidden js-row-info" data-identifiableid="111"  data-test="222"></div>
-                                            <a class="js-row-edit" href="#">Edit </a>
-                                            <a class="js-row-save" type="submit" style="display: none;" id="btn-add" href="#">Save </a>
-                                            <a class="js-row-cancel" style="display: none;" href="#">Cancel</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </c:forEach>
-                        </c:if>
-                        </tbody>
-                    </table>
+                    <div class="add-new-row js-add-new-row" align="center">
+                        <textarea rows="3"></textarea>
+                    </div>
+
                 </form>
             </div>
         </div>
